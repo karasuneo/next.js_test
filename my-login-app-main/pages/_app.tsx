@@ -1,13 +1,15 @@
-import "../styles/globals.css";
+import { css } from "@emotion/react";
+import Header from "../src/components/header";
 import type { AppProps } from "next/app";
-import { ChakraProvider } from "@chakra-ui/react";
+import { AuthProvider } from "../src/context/AuthContext";
 
-function MyApp({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }: AppProps) => {
   return (
-    <ChakraProvider>
+    <AuthProvider>
+      <Header />
       <Component {...pageProps} />
-    </ChakraProvider>
+    </AuthProvider>
   );
-}
+};
 
-export default MyApp;
+export default App;
