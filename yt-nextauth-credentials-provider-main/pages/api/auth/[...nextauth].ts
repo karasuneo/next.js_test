@@ -53,7 +53,7 @@ export default NextAuth({
     secret: "test",
     encryption: true,
   },
-  pages: {
-    signIn: "auth/sigin",
-  },
+  // pages: {
+  //   signIn: "auth/sigin",
+  // },
 });
