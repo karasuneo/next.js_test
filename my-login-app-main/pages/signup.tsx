@@ -3,16 +3,17 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useAuth, useUser } from "../hooks/firebase";
-import {
-  Box,
-  Button,
-  Flex,
-  FormLabel,
-  Heading,
-  Image,
-  Input,
-  Text,
-} from "@chakra-ui/react";
+import styles from "../styles/index.module.css";
+// import {
+//   Box,
+//   Button,
+//   Flex,
+//   FormLabel,
+//   Heading,
+//   Image,
+//   Input,
+//   Text,
+// } from "@chakra-ui/react";
 import Link from "next/link";
 
 type Inputs = {
@@ -58,13 +59,7 @@ export default function Signup() {
   }, [currentUser, router]);
 
   return (
-    <Flex>
-      <Box
-        w="50%"
-        display="flex"
-        flexDirection="column"
-        justifyContent="center"
-      >
+    <>
         <Heading color="gray.800" mb="48px" textAlign="center" size="xl">
           ようこそ
         </Heading>
@@ -149,6 +144,6 @@ export default function Signup() {
         alt="カバー画像"
         src="https://images.unsplash.com/photo-1652554715588-60c932f66a0b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
       />
-    </Flex>
+    </>
   );
 }
