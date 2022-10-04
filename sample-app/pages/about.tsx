@@ -1,10 +1,10 @@
 import Header from "../components/header";
 
-export default function IndexPage() {
+export default function AboutPage() {
   return (
     <>
       <Header />
-      <h1>Hello World!</h1>
+      <h1>About page</h1>
     </>
   );
 }
